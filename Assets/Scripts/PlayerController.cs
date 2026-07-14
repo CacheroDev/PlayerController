@@ -15,12 +15,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+        horizontal = Input.GetAxis("Horizontal");
     }
 
     private void FixedUpdate()
     {
-        horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 }
